@@ -1,0 +1,22 @@
+{
+  "name": "glowing-parakeet",
+  "version": "1.0.0",
+  "description": "add",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolechung/glowing-parakeet.git"
+  },
+  "author": "Nicole Chung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicolechung/glowing-parakeet/issues"
+  },
+  "homepage": "https://github.com/nicolechung/glowing-parakeet#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
