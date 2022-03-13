@@ -42,4 +42,8 @@ jobs:
         with:
           persist-credentials: false
       - run: npm install
+      - run: echo '🎉 publishing...'
+      - run: node_modules/.bin/semantic-release
+      - env:
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
