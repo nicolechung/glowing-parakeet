@@ -20,16 +20,21 @@ To be used whenever you are using node. It allows you to cache the node modules,
 
 Lints pull requests with [Commitlint](https://commitlint.js.org/#/)
 
-
-## Github expresssions
-
-Github expressions come in the format:
-
-```yaml
-if: ${{ <expression> }}
-```
-
 ## Publish / Release
+
+### Required
+- Github Repo > Secrets > Actions
+  - NPM_TOKEN 
+  - GH_TOKEN (github token): note that prefixing the token with `GITHUB_` is no longer allowed, so name this GH_TOKEN instead
+
+- package.json
+
+```
+"release": {
+  "analyzeCommits": "semantic-release-conventional-commits"
+  "branches": "main"
+}
+```
 
 ## linting commits
 
