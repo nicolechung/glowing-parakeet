@@ -33,18 +33,15 @@ jobs:
   publish:
     name: Release
     runs-on: ubuntu-latest
-    # only run on the main branch
-    if: ${{ github.ref == 'refs/head/main'}}
     needs: [ test ]
 
     steps:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v3
       - run: npm install
       - run: echo '🎉 publishing...'
       - run: node_modules/.bin/semantic-release
         env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
