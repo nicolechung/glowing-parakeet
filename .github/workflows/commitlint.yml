@@ -11,4 +11,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: echo '🌈 running commitlint'
-      - uses: wagoid/commitlint-github-action@v4
+      - uses: wagoid/commitlint-github-action@v5
